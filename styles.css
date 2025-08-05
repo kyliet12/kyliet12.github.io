@@ -37,9 +37,9 @@ nav {
   left: 0;
   width: 100%;
   height: 5vh;
-  background-color: #63666A; /* or any background */
+  background-color: #63666a; /* or any background */
   z-index: 1000; /* ensures it stays above other content */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional shadow */
 }
 
 .nav-container {
@@ -61,7 +61,7 @@ nav {
   text-shadow: 0 0 10px #b74b4b;
 }
 
-.hamburg,
+/* .hamburg,
 .cancel {
   curser: pointer;
   position: absolute;
@@ -71,7 +71,7 @@ nav {
   opacity: 0;
   pointer-events: none;
   font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-}
+} */
 
 .nav-container .links {
   display: flex;
@@ -81,17 +81,17 @@ nav {
   position: relative;
   font-size: 1.2rem;
   color: white;
-  margin 0 20px;
+  margin: 0 20px;
   text-decoration: none;
   font-weight: 550;
   transition: 0.3s linear;
 }
 
-.nav-container .links .link{
+.nav-container .links .link {
   margin: 0 10px;
 }
 
-.nav-container .links a::before{
+.nav-container .links a::before {
   position: absolute;
   content: "";
   bottom: -3px;
@@ -102,17 +102,15 @@ nav {
   transition: 0.2s linear;
 }
 
-.nav-container .links a:hover::before{
+.nav-container .links a:hover::before {
   width: 100%;
 }
 
-.nav-container .links a:hover{
+.nav-container .links a:hover {
   color: #b74b4b;
 }
 
-
-
-.dropdown{
+/* .dropdown{
   z-index: 100;
   position: absolute;
   top: 0;
@@ -136,35 +134,34 @@ nav {
 
 .dropdown .links a:hover{
     background-color: #b74b4b;
-}
+} */
 
-section{
+section {
   width: 100%;
   min-height: 70vh;
   padding-top: 10vh;
 }
 
-section.main-container{
+section.main-container {
   display: flex;
   justify-content: space-between;
   padding-right: 300px;
   align-items: center;
 }
 
-.main-container .image{
+.main-container .image {
   width: 500px;
   height: 70vh;
   border-radius: 100%;
   overflow: hidden;
-  box-shadow: 0 0 25px rgba(183, 75, 75,55);
-  
+  box-shadow: 0 0 25px rgba(183, 75, 75, 55);
 }
 
-.main-container .image img{
+.main-container .image img {
   width: 100%;
 }
 
-.main-container .image:hover{
+.main-container .image:hover {
   animation: 1.5s ease-in-out-infinte;
 }
 
@@ -221,37 +218,36 @@ section.main-container{
   }
 }
 
-
-.main-container .content{
+.main-container .content {
   color: white;
   width: 40%;
 }
 
-.content h1{
+.content h1 {
   font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
 
-.content h1 span{
+.content h1 span {
   color: #b74b4b;
   text-shadow: 0 0 10px #b74b4b;
 }
 
-.content .typewriter{
+.content .typewriter {
   font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
   font-weight: 600;
 }
 
-.content .typewriter-text{
+.content .typewriter-text {
   color: #b74b4b;
   text-shadow: 0 0 10px #b74b4b;
 }
 
-.content p{
-  font-size: clamp(.4rem, .2rem + 9vw, 1rem);
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
   margin: 10px 0;
 }
 
-.social-links i{
+.social-links i {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -266,14 +262,14 @@ section.main-container{
   transition: 0.2s linear;
 }
 
-.social-links i:hover{
+.social-links i:hover {
   scale: 1.3;
   color: black;
   background-color: #b74b4b;
   filter: drop-shadow(0 0 10px #b74b4b);
 }
 
-.content button{
+.content button {
   width: 50%;
   height: 6vh;
   margin: 30px;
@@ -287,9 +283,9 @@ section.main-container{
   transition: 0.2s linear;
 }
 
-.content button:hover{
+.content button:hover {
   scale: 1.1;
-  color:#b74b4b;
+  color: #b74b4b;
   border: 2px solid #b74b4b;
   background-color: transparent;
   font-weight: 700;
@@ -297,25 +293,25 @@ section.main-container{
 }
 
 /* About Section */
-section .content{
+section .content {
   width: 80%;
   margin: 0px auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.about .about-details{
+.about .about-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-section .title{
+section .title {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
 
-section .title span{
+section .title span {
   color: white;
   font-size: 30px;
   font-weight: 600;
@@ -324,8 +320,8 @@ section .title span{
 }
 
 section .title span::before,
-section .title span::after{
-  content: '';
+section .title span::after {
+  content: "";
   position: absolute;
   height: 3px;
   width: 100%;
@@ -334,39 +330,39 @@ section .title span::after{
   bottom: 0;
 }
 
-section .title span::after{
+section .title span::after {
   bottom: -7px;
   width: 70%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.about .about-details .left{
+.about .about-details .left {
   width: 45%;
 }
-.about .left img{
+.about .left img {
   height: 400px;
   width: 400px;
   object-fit: cover;
   border-radius: 12px;
 }
-.about-details .right{
+.about-details .right {
   width: 55%;
 }
-section .topic{
+section .topic {
   color: white;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 10px;
 }
-.about-details .right p{
+.about-details .right p {
   text-align: justify;
   color: white;
 }
-section .button{
+section .button {
   margin: 16px 0;
 }
-section .button button{
+section .button button {
   outline: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -376,10 +372,10 @@ section .button button{
   color: #fff;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-section .button button:hover{
-  border-color:#b74b4b;
+section .button button:hover {
+  border-color: #b74b4b;
   background-color: #fff;
   color: #b74b4b;
 }
@@ -511,7 +507,6 @@ section .button button:hover{
   gap: 20px;
 }
 
-
 .skill-box {
   flex: 1 1 calc(25% - 20px); /* 4 columns with spacing */
   background-color: #1a1a1a;
@@ -520,7 +515,7 @@ section .button button:hover{
   text-align: center;
   position: relative;
   transition: transform 0.3s ease;
-  min-width: 200px; Optional: prevents shrinking too small
+  min-width: 200px; /* Optional: prevents shrinking too small */
   /* width: calc(25% - 20px);
   background-color: #1a1a1a;
   padding: 20px;
@@ -661,8 +656,6 @@ section .button button:hover{
   margin-right: 6px;
 }
 
-
-
 .education {
   /* background-color: #0f0f0f; */
   padding: 40px 0;
@@ -695,4 +688,3 @@ section .button button:hover{
   font-size: 12px;
   color: #999;
 }
-
