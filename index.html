@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <span></span>
+        </div>
+        <div class="links">
+          <div class="link"><a href="#home">Home</a></div>
+          <div class="link"><a href="#skills">Skills</a></div>
+          <div class="link"><a href="#projects">Projects</a></div>
+          <div class="link"><a href="#education">Education</a></div>
+          <div class="link"><a href="#contact">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Skills</a>
+          <a href="#">Education</a>
+          <a href="#">Experience</a>
+          <a href="#">Contact</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main-container" id="home">
+      <!-- <div class="image">
+        <img src="IMG_8973.PNG" alt="ai_photo" />
+      </div> -->
+
+      <div class="content">
+        <h1 data-aos="fade-left">Hi, I'm <span>Kylie</span></h1>
+        <span style="font-size: 1.5em; font-weight: bold;"> I'm a </span>
+        <span style="font-size: 2.5em; font-weight: bold;">   </span>
+        <div class="typewriter" id="typewriter"></div>
+    <div class="cursor"></div>
+        
+    <script>
+      const texts = [
+        "Student",
+        "Data Scientist",
+        "Data Analyst",
+        "Explorer",
+        "Developer"
+      ];
+
+      let index = 0;
+      const typewriter = document.getElementById("typewriter");
+
+      function typeText(text, callback) {
+        let i = 0;
+        typewriter.textContent = "";
+        const interval = setInterval(() => {
+          typewriter.textContent += text.charAt(i);
+          i++;
+          if (i > text.length) {
+            clearInterval(interval);
+            setTimeout(callback, 3000);
+          }
+        }, 150);
+      }
+
+      function deleteText(callback) {
+        let text = typewriter.textContent;
+        let i = text.length;
+        const interval = setInterval(() => {
+          typewriter.textContent = text.substring(0, i - 1);
+          i--;
+          if (i < 0) {
+            clearInterval(interval);
+            callback();
+          }
+        }, 50);
+      }
+
+      function loop() {
+        typeText(texts[index], () => {
+          deleteText(() => {
+            index = (index + 1) % texts.length;
+            loop();
+          });
+        });
+      }
+
+      loop();
+    </script>
+        <p>
+          An aspiring data scientist, I'm interested in machine learning applications. Most recently, I interned as a Data Analyst and have completed multiple machine learning research projects. 
+        </p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/kylie-trousil" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/kyliet12" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a> -->
+        </div>
+        <!-- <div class="btn">
+          <button>Hire me</button>
+        </div> -->
+      </div>
+
+      <div class="image">
+        <img src="nn_landscape.png" alt="ai_photo" />
+      </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title">
+          <span>About Me</span>
+        </div>
+        <div class="about-details">
+          <div class="left">
+            <img src="me.jpg" alt=""/>
+          </div>
+          <div class="right">
+            <div class="topic"> Conquering the Data Puzzle </div>
+            <p>
+              I am currently working towards my Masters in Data Science at the University of Washinton. I recently graduated from University of Wisconsin La Crosse with a BS in Computer Science and a BS in Applied Math. I am specifically interested in working with Machine Learning models to help make predictions and better understand the world around us.
+            </p>
+            <div class="button">
+              <a href="test.txt" download>
+              <button>Download CV</button>
+              </a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title">
+          <span>Skills</span>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-box">
+            <div class="skill-header">
+              <i class="fab fa-python" style="font-size: 48px; color: #3776AB;"></i>
+              <h3>Python</h3>
+            </div>
+            <div class="gauge-container">
+              <svg viewBox="0 0 180 100" class="semi-circle-chart">
+                <path class="semi-bg" d="M10,100 A80,80 0 0,1 170,100" />
+                <path class="semi-fill" d="M10,100 A80,80 0 0,1 170,100" stroke-dasharray="200 51" />
+                <text x="90" y="85" class="percentage">80%</text>
+              </svg>
+            </div>
+            <div class="skill-details">
+              Libraries: TensorFlow, PyTorch, NumPy, Pandas, Matplotlib, Scikit-learn
+            </div>
+            <div class="project-hover">
+              Projects: Generative ML Model, Predictive Semi-Supervised ML Model, Strava API
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-header">
+              <i class="fas fa-database" style="color: blue; font-size: 48px;"></i>
+              <h3>SQL</h3>
+            </div>
+            <div class="gauge-container">
+              <svg viewBox="0 0 180 100" class="semi-circle-chart">
+                <path class="semi-bg" d="M10,100 A80,80 0 0,1 170,100" />
+                <path class="semi-fill" d="M10,100 A80,80 0 0,1 170,100" stroke-dasharray="213 38" />
+                <text x="90" y="85" class="percentage">85%</text>
+              </svg>
+            </div>
+            <div class="skill-details">
+              Databases: Databricks SQL, SQL Server, MySQL<br/>
+              Skills: Joins, subqueries, cte's, window & aggregate functions
+            </div>
+            <div class="project-hover">
+              Projects: Converting scripts from Oracle SQL to Databricks SQL, creating basic MySQL database
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-header" style="display: flex; align-items: center; gap: 8px;">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="C Language Logo"
+                style="flex-shrink: 0;"
+              >
+                <!-- Smaller blue hexagon background -->
+                <polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="#00599C"/>
+                <!-- Centered white letter C -->
+                <text
+                  x="50"
+                  y="57"
+                  font-family="Arial, sans-serif"
+                  font-size="50"
+                  fill="white"
+                  font-weight="bold"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                >
+                  C
+                </text>
+              </svg>
+              <h3 style="margin: 0;">C</h3>
+            </div>
+            <div class="gauge-container">
+              <svg viewBox="0 0 180 100" class="semi-circle-chart">
+                <path class="semi-bg" d="M10,100 A80,80 0 0,1 170,100" />
+                <path class="semi-fill" d="M10,100 A80,80 0 0,1 170,100" stroke-dasharray="175 76" />
+                <text x="90" y="85" class="percentage">70%</text>
+              </svg>
+            </div>
+            <div class="skill-details">
+              Focus: memory management, pointers, arrays, synchronization
+            </div>
+            <div class="project-hover">
+              Projects: created basic compiler, all university courses taught in C
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-header">
+              <i class="devicon-r-plain" style="font-size: 48px; color: #276dc3;"></i>
+              <h3>R</h3>
+            </div>
+            <div class="gauge-container">
+              <svg viewBox="0 0 180 100" class="semi-circle-chart">
+                <path class="semi-bg" d="M10,100 A80,80 0 0,1 170,100" />
+                <path class="semi-fill" d="M10,100 A80,80 0 0,1 170,100" stroke-dasharray="125 126" />
+                <text x="90" y="85" class="percentage">50%</text>
+              </svg>
+            </div>
+            <div class="skill-details">
+              Packages: ggplot2, dplyr, tidyr<br/>
+              Use: Statistical analysis, basic econometrics
+            </div>
+            <div class="project-hover">
+              Projects: estimating population wealth, basic linear algebra labs
+            </div>
+          </div>
+        </div>
+      
+      <!-- Repeat .skill-box for SQL, C, R -->
+    </div>
+    </section>
+    
+    <section class="projects" id="projects">
+      <div class="content">
+        <div class="title">
+          <span>Projects</span>
+        </div>
+    
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Generative ML Model</h3>
+            <p>Employing three generative AI models to produce synthetic malware samples that enhance imbalanced malware datasets. I am specifically responsible for developing the diffusion model. Also utilized NLP to convert the dataset.</p>
+            <span class="tags">Python · ML · TensorFlow · PyTorch</span>
+            <a href="https://github.com/JOJO11111111/NSF_Diffusion_Opcode_Group" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+    
+          <div class="project-card">
+            <h3>Baggot's final project</h3>
+            <p>Used Python and Flask to pull fitness data from Strava and visualize it with Matplotlib.</p>
+            <span class="tags">Python · ML · PyTorch</span>
+          </div>
+    
+          <div class="project-card">
+            <h3>Semi-Supervised ML Image Classification</h3>
+            <p>Utilized semi-supervised machine learning model to help classify breast ultra-sound images and classify tumors as either malignant or benign</p>
+            <span class="tags">Python · ML · TensorFlow</span>
+            <a href="https://github.com/Cole4856/YMCAProject" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Strava API Integration</h3>
+            <p>Utilized semi-supervised machine learning model to help classify breast ultra-sound images and classify tumors as either malignant or benign</p>
+            <span class="tags">Python · API · Pandas · Matplotlib</span>
+            <a href="https://github.com/Cole4856/YMCAProject" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>YMCA Website & SQL Database</h3>
+            <p>Example YMCA website allowing users to view account information and register for courses. Data is stored in SQL database hosted on Amazon RDS</p>
+            <span class="tags">C# · MySQL · HTML</span>
+            <a href="https://github.com/Cole4856/YMCAProject" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Databases Final Project</h3>
+            <p>Utilized semi-supervised machine learning model to help classify breast ultra-sound images and classify tumors as either malignant or benign</p>
+            <span class="tags">Java · MySQL</span>
+            <a href="https://github.com/Cole4856/YMCAProject" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <div class="content">
+        <div class="title">
+          <span>Education</span>
+        </div>
+
+        <div class="education-list">
+
+        <div class="education-item">
+          <h3>University of Washington</h3>
+          <p>M.S. Data Science · 2025-2027</p>
+          <!-- <span class="details">Relevant coursework: Data Structures, Machine Learning</span> -->
+        </div>
+    
+        
+          <div class="education-item">
+            <h3>University of Wisconsin–La Crosse </h3>
+            <p>B.S. in Computer Science, B.S. in Mathematics: Applied Emphasis · 2021–2025</p>
+            <span class="details">Relevant coursework: Data Structures, Machine Learning</span>
+          </div>
+    
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section Start -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title">
+          <span>Contact Me</span>
+        </div>
+        <div class="text">
+          <div class="topic"> Have a Project? </div>
+          <p> aksdj fkdsj alsdj aldskj ajsk skjd ksjhd kshdf ksjdhkjdhfkja jkshd akjs haskjd kjsd haksjh lksjdkjdsh jas hkjs hfjdk jshf uie whkja jdh kjh iauh kj j hiah iwf </p>
+          <div class="button">
+            <button>Let's Chat</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="text">
+        <span> Created By 
+          <a href="#">proccoder09</a>
+          &#169; 2024 All Rights Reserved</span>
+    </footer>
+
+
+
+
+  </body>
+</html>
