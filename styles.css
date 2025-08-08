@@ -16,6 +16,133 @@
   font-size: 62.5%;
 } */
 
+/* Responsive Styles */
+@media (max-width: 800px) {
+  nav {
+    height: auto;
+    padding: 10px 0;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+  .logo {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .nav-container .links {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .nav-container .links .link {
+    margin: 0;
+  }
+  section.main-container {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: flex-start;
+    padding-left: 0;
+    gap: 24px;
+  }
+  .main-container .image {
+    width: 90vw;
+    height: auto;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+  }
+  .main-container .content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  section .content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .about .about-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about .about-details .left,
+  .about-details .right {
+    width: 100%;
+  }
+  .about .left img {
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .skill-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .skill-box {
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .semi-circle-chart {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 10px auto;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .education-list {
+    gap: 12px;
+  }
+  .education-item {
+    padding: 12px;
+  }
+  .content button, section .button button {
+    width: 100%;
+    margin: 16px 0;
+    font-size: 1rem;
+    height: 40px;
+  }
+  .social-links i {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    margin: 3px 8px;
+  }
+  .content h1 {
+    font-size: 1.3rem;
+  }
+  .content .typewriter {
+    font-size: 1.1rem;
+  }
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-container .image {
+    max-width: 200px;
+  }
+  .about .left img {
+    max-width: 150px;
+  }
+  .semi-circle-chart {
+    max-width: 140px;
+  }
+  .content h1 {
+    font-size: 1rem;
+  }
+  .content .typewriter {
+    font-size: 0.9rem;
+  }
+  .content p {
+    font-size: 0.8rem;
+  }
+}
+
 body {
   width: 100%;
   height: auto;
